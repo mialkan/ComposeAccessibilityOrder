@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatRatingBar
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -20,7 +19,6 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -74,7 +72,7 @@ fun ComposeScreen(navController: NavController) {
                 ) {
                     Text(text = "Lorem ipsum")
                     Text(text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-                    AndroidView(
+                    /*AndroidView(
                         factory = { context ->
                             AppCompatRatingBar(context).apply {
                                 setOnRatingBarChangeListener { _, _, _ ->
@@ -83,7 +81,10 @@ fun ComposeScreen(navController: NavController) {
                         },
                         update = { _ ->
                         }
-                    )
+                    )*/
+                    Button(onClick = { /*TODO*/ }) {
+                        Text("Btn Text")
+                    }
                     TextField(
                         value = "",
                         onValueChange = {},

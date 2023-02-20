@@ -2,7 +2,11 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
-
+ext{
+    composeCompilerVersion = "1.4.2"
+    composeVersion = "1.4.0-beta01"
+    //composeVersion = "1.3.0"
+}
 android {
     namespace 'com.mialkan.composeaccessibilityorder'
     compileSdk 33
@@ -34,11 +38,11 @@ android {
         viewBinding true
         compose true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = composeCompilerVersion
+    }
 }
-ext{
-    //composeVersion = "1.4.0-alpha03"
-    composeVersion = "1.3.0"
-}
+
 dependencies {
 
 
@@ -58,7 +62,9 @@ dependencies {
 
     implementation 'androidx.activity:activity-compose:1.6.1'
 
+    implementation "androidx.compose.compiler:compiler:$composeCompilerVersion"
     implementation "androidx.compose.foundation:foundation:$composeVersion"
     implementation "androidx.compose.material:material:$composeVersion"
     implementation "androidx.compose.ui:ui-tooling:$composeVersion"
 }
+

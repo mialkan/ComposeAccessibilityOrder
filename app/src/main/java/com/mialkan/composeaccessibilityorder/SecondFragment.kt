@@ -44,7 +44,7 @@ class SecondFragment : Fragment() {
             setupWithNavController(
                 navController
             )
-            navController.addOnDestinationChangedListener { _, destination, _ ->
+            navController.addOnDestinationChangedListener { _, _, _ ->
                 navigationIcon = ContextCompat.getDrawable(
                     context,
                     R.drawable.ic_back
