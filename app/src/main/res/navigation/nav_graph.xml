@@ -18,6 +18,13 @@
         <action
             android:id="@+id/action_FirstFragment_to_ComposeFragment"
             app:destination="@id/composeFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SnackBarErrorFragment"
+            app:destination="@id/snackBarErrorFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_FormInputErrorFragment"
+            app:destination="@id/formInputErrorFragment" />
     </fragment>
 
     <fragment
@@ -32,4 +39,12 @@
         android:name="com.mialkan.composeaccessibilityorder.ComposeFragment">
     </fragment>
 
+    <fragment
+        android:id="@+id/snackBarErrorFragment"
+        android:name="com.mialkan.composeaccessibilityorder.SnackBarErrorFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/formInputErrorFragment"
+        android:name="com.mialkan.composeaccessibilityorder.FormInputErrorFragment">
+    </fragment>
 </navigation>

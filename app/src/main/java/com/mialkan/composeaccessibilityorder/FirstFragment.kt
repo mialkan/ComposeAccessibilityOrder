@@ -37,6 +37,14 @@ class FirstFragment : Fragment() {
         binding.buttonCompose.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_ComposeFragment)
         }
+
+        binding.buttonSnackbar.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_SnackBarErrorFragment)
+        }
+
+        binding.buttonInputError.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_FormInputErrorFragment)
+        }
     }
 
     override fun onDestroyView() {
